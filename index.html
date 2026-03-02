@@ -3,157 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Content Bible — MIDAO</title>
+  <title>Content Bible — MIDAO 🇲🇭</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0a0a0a;
-      --surface: #141414;
-      --surface-2: #1a1a1a;
-      --border: rgba(255,255,255,0.06);
-      --border-hover: rgba(255,255,255,0.12);
-      --text: #e8e8e8;
-      --text-secondary: rgba(255,255,255,0.5);
-      --accent: #3b82f6;
-      --accent-glow: rgba(59,130,246,0.15);
-      --near: #10b981;
-      --mid: #f59e0b;
-      --long: #ef4444;
+      --ocean: #0c2340;
+      --deep: #091a30;
+      --lagoon: #1a6b8a;
+      --reef: #2ec4b6;
+      --sand: #f4e8c1;
+      --gold: #c9a84c;
+      --coral: #e8655a;
+      --amber: #e6a243;
+      --glass: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.1);
+      --glass-hover: rgba(255,255,255,0.1);
+      --text: #f0ece4;
+      --text-dim: rgba(240,236,228,0.5);
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--bg);
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--deep);
       color: var(--text);
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
 
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(26,107,138,0.15) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(46,196,182,0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+      z-index: -1;
+    }
+
     /* Header */
     .header {
-      padding: 3rem 2rem 2rem;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem 2.5rem;
+      text-align: center;
     }
-    .header-top {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: 0.5rem;
+    .header-flag {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
     }
     .header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.75rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--sand);
+      margin-bottom: 0.5rem;
     }
-    .header .flag {
-      font-size: 1.25rem;
+    .header-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1rem auto;
     }
     .header p {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      letter-spacing: 0.02em;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
     }
 
     /* Toolbar */
     .toolbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.25rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 2rem;
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.25rem;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--border);
     }
     .filter-group {
       display: flex;
       align-items: center;
-      gap: 0.375rem;
+      gap: 0.25rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      padding: 0.25rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
     }
     .filter-group label {
-      font-size: 0.65rem;
+      font-size: 0.6rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-secondary);
-      margin-right: 0.25rem;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      padding: 0 0.625rem;
     }
     .filter-btn {
       font-family: 'Inter', sans-serif;
       font-size: 0.75rem;
       font-weight: 500;
-      padding: 0.375rem 0.75rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
+      padding: 0.4rem 0.875rem;
+      border-radius: 9px;
+      border: none;
       background: transparent;
-      color: var(--text-secondary);
+      color: var(--text-dim);
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.2s ease;
     }
     .filter-btn:hover {
-      border-color: var(--border-hover);
       color: var(--text);
-      background: var(--surface);
+      background: rgba(255,255,255,0.05);
     }
     .filter-btn.active {
-      background: var(--text);
-      color: var(--bg);
-      border-color: var(--text);
+      background: rgba(255,255,255,0.12);
+      color: var(--sand);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
-    .count {
+
+    .search-wrap {
       margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .search-input {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      color: var(--text);
+      outline: none;
+      width: 200px;
+      transition: border-color 0.2s;
+    }
+    .search-input::placeholder { color: var(--text-dim); }
+    .search-input:focus { border-color: rgba(46,196,182,0.4); }
+
+    .count {
       font-size: 0.7rem;
-      color: var(--text-secondary);
+      font-weight: 500;
+      color: var(--text-dim);
       font-variant-numeric: tabular-nums;
     }
-    .divider {
-      width: 1px;
-      height: 20px;
-      background: var(--border);
-    }
 
-    /* Grid */
+    /* Cards grid */
     .grid {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 1.5rem 2rem 4rem;
+      padding: 0 2rem 5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1px;
-      background: var(--border);
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
     }
 
-    /* Card */
+    /* Card — frosted glass */
     .card {
-      background: var(--bg);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
       padding: 1.5rem;
-      transition: background 0.2s ease;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition: all 0.25s ease;
     }
     .card:hover {
-      background: var(--surface);
+      background: var(--glass-hover);
+      border-color: rgba(255,255,255,0.16);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
-    .card-header {
+    .card-meta {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
     .card h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      line-height: 1.3;
-      margin-bottom: 0.5rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--sand);
+      line-height: 1.35;
+      margin-bottom: 0.625rem;
     }
     .card p {
       font-size: 0.8rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-dim);
     }
 
     /* Badges */
@@ -162,65 +216,67 @@
       font-weight: 600;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 0.25rem 0.5rem;
-      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
     }
-    .badge-near { background: rgba(16,185,129,0.12); color: #34d399; }
-    .badge-mid { background: rgba(245,158,11,0.12); color: #fbbf24; }
-    .badge-long { background: rgba(239,68,68,0.12); color: #f87171; }
+    .badge-near { background: rgba(46,196,182,0.12); color: var(--reef); border: 1px solid rgba(46,196,182,0.2); }
+    .badge-mid { background: rgba(230,162,67,0.12); color: var(--amber); border: 1px solid rgba(230,162,67,0.2); }
+    .badge-long { background: rgba(232,101,90,0.12); color: var(--coral); border: 1px solid rgba(232,101,90,0.2); }
     .badge-medium {
       font-size: 0.6rem;
       font-weight: 500;
       letter-spacing: 0.04em;
-      color: var(--text-secondary);
+      color: var(--text-dim);
     }
 
-    /* Empty */
     .empty {
       grid-column: 1 / -1;
       text-align: center;
-      padding: 4rem 2rem;
-      color: var(--text-secondary);
+      padding: 5rem 2rem;
       font-size: 0.85rem;
-      background: var(--bg);
+      font-weight: 300;
+      color: var(--text-dim);
     }
     .empty.hidden { display: none; }
 
-    /* Search */
-    .search-input {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      padding: 0.4rem 0.75rem;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text);
-      outline: none;
-      width: 180px;
-      transition: border-color 0.15s;
+    /* Footer */
+    .footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+      text-align: center;
     }
-    .search-input::placeholder { color: var(--text-secondary); }
-    .search-input:focus { border-color: rgba(255,255,255,0.2); }
+    .footer-rule {
+      width: 32px;
+      height: 1px;
+      background: var(--glass-border);
+      margin: 0 auto 1rem;
+    }
+    .footer p {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
 
     @media (max-width: 768px) {
-      .header { padding: 2rem 1.25rem 1.5rem; }
-      .toolbar { padding: 1rem 1.25rem; gap: 1rem; }
-      .grid { padding: 0 0 3rem; grid-template-columns: 1fr; }
-      .card { padding: 1.25rem; }
-      .count { margin-left: 0; }
+      .header { padding: 3rem 1.5rem 2rem; }
+      .header h1 { font-size: 2rem; }
+      .toolbar { padding: 0 1.5rem; }
+      .grid { padding: 0 1.5rem 4rem; grid-template-columns: 1fr; }
+      .search-wrap { margin-left: 0; width: 100%; }
       .search-input { width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div class="header-top">
-      <h1>Content Bible</h1>
-      <span class="flag">🇲🇭</span>
-    </div>
-    <p>Strategy · Ideas · Pipeline</p>
-  </div>
+  <header class="header">
+    <span class="header-flag">🇲🇭</span>
+    <h1>Content Bible</h1>
+    <div class="header-rule"></div>
+    <p>Marshall Islands · Strategy &amp; Pipeline</p>
+  </header>
 
   <div class="toolbar">
     <div class="filter-group">
@@ -230,25 +286,26 @@
       <button class="filter-btn" data-filter="timeline" data-value="Mid Term">Mid</button>
       <button class="filter-btn" data-filter="timeline" data-value="Long Term">Long</button>
     </div>
-    <div class="divider"></div>
     <div class="filter-group" id="medium-filters">
       <label>Medium</label>
       <button class="filter-btn active" data-filter="medium" data-value="all">All</button>
     </div>
-    <div class="divider"></div>
-    <input type="text" class="search-input" id="search" placeholder="Search…">
-    <span class="count" id="count"></span>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="search" placeholder="Search…">
+      <span class="count" id="count"></span>
+    </div>
   </div>
 
   <div class="grid" id="cards"></div>
 
-  <script>
-    let ideas = [];
-    let activeTimeline = 'all';
-    let activeMedium = 'all';
-    let searchQuery = '';
+  <footer class="footer">
+    <div class="footer-rule"></div>
+    <p>MIDAO Content Bible</p>
+  </footer>
 
-    const tlBadge = { 'Near Term': 'badge-near', 'Mid Term': 'badge-mid', 'Long Term': 'badge-long' };
+  <script>
+    let ideas = [], activeTimeline = 'all', activeMedium = 'all', searchQuery = '';
+    const tlClass = { 'Near Term': 'badge-near', 'Mid Term': 'badge-mid', 'Long Term': 'badge-long' };
 
     function render() {
       const filtered = ideas.filter(i => {
@@ -257,67 +314,47 @@
         if (searchQuery) {
           const q = searchQuery.toLowerCase();
           return i.title.toLowerCase().includes(q) || i.description.toLowerCase().includes(q) ||
-            (i.tags || []).some(t => t.toLowerCase().includes(q));
+            (i.tags||[]).some(t => t.toLowerCase().includes(q));
         }
         return true;
       });
-
       document.getElementById('count').textContent = filtered.length + ' item' + (filtered.length !== 1 ? 's' : '');
-      const container = document.getElementById('cards');
-
-      if (!filtered.length) {
-        container.innerHTML = '<div class="empty">No items match these filters.</div>';
-        return;
-      }
-
-      container.innerHTML = filtered.map(i => {
-        const cls = tlBadge[i.timeline] || 'badge-near';
-        const desc = i.description.replace(/\n/g, '<br>');
-        return `<div class="card">
-          <div class="card-header">
-            <span class="badge ${cls}">${i.timeline}</span>
-            <span class="badge-medium">${i.medium}</span>
-          </div>
-          <h3>${i.title}</h3>
-          <p>${desc}</p>
-        </div>`;
-      }).join('');
+      const c = document.getElementById('cards');
+      if (!filtered.length) { c.innerHTML = '<div class="empty">No items match.</div>'; return; }
+      c.innerHTML = filtered.map(i => `<div class="card">
+        <div class="card-meta">
+          <span class="badge ${tlClass[i.timeline]||'badge-near'}">${i.timeline}</span>
+          <span class="badge-medium">${i.medium}</span>
+        </div>
+        <h3>${i.title}</h3>
+        <p>${i.description.replace(/\n/g,'<br>')}</p>
+      </div>`).join('');
     }
 
     function buildMediumFilters() {
       const mediums = [...new Set(ideas.map(i => i.medium))].sort();
-      const container = document.getElementById('medium-filters');
+      const el = document.getElementById('medium-filters');
       mediums.forEach(m => {
         const btn = document.createElement('button');
-        btn.className = 'filter-btn';
-        btn.dataset.filter = 'medium';
-        btn.dataset.value = m;
-        btn.textContent = m;
-        container.appendChild(btn);
+        btn.className = 'filter-btn'; btn.dataset.filter = 'medium'; btn.dataset.value = m;
+        btn.textContent = m; el.appendChild(btn);
       });
     }
 
     document.addEventListener('click', e => {
       const btn = e.target.closest('.filter-btn');
       if (!btn) return;
-      const type = btn.dataset.filter, val = btn.dataset.value;
-      document.querySelectorAll(`.filter-btn[data-filter="${type}"]`).forEach(b => b.classList.remove('active'));
+      const t = btn.dataset.filter, v = btn.dataset.value;
+      document.querySelectorAll(`.filter-btn[data-filter="${t}"]`).forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      if (type === 'timeline') activeTimeline = val;
-      if (type === 'medium') activeMedium = val;
+      if (t === 'timeline') activeTimeline = v;
+      if (t === 'medium') activeMedium = v;
       render();
     });
 
-    document.getElementById('search').addEventListener('input', e => {
-      searchQuery = e.target.value;
-      render();
-    });
+    document.getElementById('search').addEventListener('input', e => { searchQuery = e.target.value; render(); });
 
-    fetch('data.json').then(r => r.json()).then(data => {
-      ideas = data;
-      buildMediumFilters();
-      render();
-    });
+    fetch('data.json').then(r => r.json()).then(d => { ideas = d; buildMediumFilters(); render(); });
   </script>
 </body>
 </html>
