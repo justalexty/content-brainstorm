@@ -342,7 +342,7 @@
     }
 
     function buildMediumFilters() {
-      const order = ['Text','Video','Event'];
+      const order = ['Text','AV','Event'];
       const mediums = order.filter(m => ideas.some(i => i.medium === m)).concat([...new Set(ideas.map(i => i.medium))].filter(m => !order.includes(m)).sort());
       const el = document.getElementById('medium-filters');
       mediums.forEach(m => {
