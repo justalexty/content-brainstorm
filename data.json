@@ -2,7 +2,7 @@
   {
     "title": "Example: Welcome Post",
     "description": "Introduce the team and mission.\nShare the story behind what we're building.\nKeep it personal and authentic.",
-    "medium": "Blog",
+    "medium": "Text",
     "timeline": "Near Term",
     "tags": ["launch", "brand"]
   },
@@ -23,7 +23,7 @@
   {
     "title": "Placeholder 4",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Blog",
+    "medium": "Text",
     "timeline": "Near Term",
     "tags": ["placeholder"]
   },
@@ -44,7 +44,7 @@
   {
     "title": "Placeholder 7",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Blog",
+    "medium": "Text",
     "timeline": "Mid Term",
     "tags": ["placeholder"]
   },
@@ -72,7 +72,7 @@
   {
     "title": "Placeholder 11",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Blog",
+    "medium": "Text",
     "timeline": "Long Term",
     "tags": ["placeholder"]
   },
