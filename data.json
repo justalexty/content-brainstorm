@@ -2,7 +2,7 @@
  {
     "title": "Quarterly Newsletter",
     "description": "Rather than sending a perfunctory weekly email to go unopened like all other boring newsletters, publish a quarterly zine with beautiful production value and in-depth features.\n\nOpen with a \"Letter from the Editor\" by the CEO. Feature a MIDAO client in each issue with a fawning interview like it's a glossy magazine. Showcase MIDAO's latest public service to the islands with a photo spread.\n\nFinish with a hyperlinked roundup of all MIDAO content since the last issue. (Optional: offer print editions to current MIDAO clients.)",
-    "medium": "Text",
+    "medium": "Print",
     "timeline": "Mid Term",
     "tags": ["email", "publication"]
   },
@@ -16,14 +16,14 @@
   {
     "title": "XOXO",
     "description": "Scavenger hunt that can be held at any time and/or scale. Hide a Marshall Islands postcard with a message from MIDAO in a public area. The first person to find and post it to socials tagging MIDAO wins a lump crypto prize.\n\nDrop a single postcard in a crypto hub every month, or lay out a 10-card scavenger hunt around a big conference. Super flexible activation!\n\nTagline: XOXO marks the spot.",
-    "medium": "Text",
+    "medium": "Print",
     "timeline": "Near Term",
     "tags": ["socials", "engagement"]
   },
   {
     "title": "Island Questionnaire",
     "description": "In the style of the Proust Questionnaire, pose a set list of island-themed questions to a different figure in crypto every month. Fluffy stuff like \"What 3 records would you want to be stranded with on an island?\" or \"Trunks or speedo?\"\n\nFormat it as a beautiful one pager, post and tag. More engaging than the usual interview fare, as everyone naturally thinks about what their own answers would be and occasionally replies with commentary.",
-    "medium": "Text",
+    "medium": "Print",
     "timeline": "Near Term",
     "tags": ["socials", "publication"]
   },
@@ -44,7 +44,7 @@
   {
     "title": "Placeholder 7",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Text",
+    "medium": "Print",
     "timeline": "Mid Term",
     "tags": ["placeholder"]
   },
@@ -72,7 +72,7 @@
   {
     "title": "Placeholder 11",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Text",
+    "medium": "Print",
     "timeline": "Long Term",
     "tags": ["placeholder"]
   },
