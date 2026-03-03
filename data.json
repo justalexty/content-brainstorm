@@ -25,21 +25,21 @@
     "description": "In the style of the Proust Questionnaire, pose a set list of island-themed questions to a different figure in crypto every month. Fluffy stuff like \"What 3 records would you want to be stranded with on an island?\" or \"Trunks or speedo?\"\n\nFormat it as a beautiful one pager, post and tag. More engaging than the usual interview fare, as everyone naturally thinks about what their own answers would be and occasionally replies with commentary.",
     "medium": "Text",
     "timeline": "Near Term",
-    "tags": ["placeholder"]
+    "tags": ["socials", "publication"]
   },
   {
     "title": "GG: Jekab Tournament",
     "description": "Easy but entertaining side event around any crypto conference. Host a catered jekab tournament with an enticing crypto prize.\n\nCan be produced at any scale, from simple to lavish. Go big by renting out a beautiful indoor space with a full spread, or keep it breezy by staging it in a public park with snack coolers.",
     "medium": "Event",
     "timeline": "Mid Term",
-    "tags": ["placeholder"]
+    "tags": ["event", "engagement"]
   },
   {
-    "title": "Placeholder 6",
-    "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
+    "title": "Atoll Adventure",
+    "description": "Engage both viewers and the local Marshall Islands community by staging a competition show wherein one XOXO postcard has been hidden on each inhabited atoll, and 4 local teams compete to collect the most.\n\nAlternatively, a competition show version of XOXO can be produced basically anywhere.",
     "medium": "AV",
-    "timeline": "Mid Term",
-    "tags": ["placeholder"]
+    "timeline": "Long Term",
+    "tags": ["socials", "engagement"]
   },
   {
     "title": "Placeholder 7",
