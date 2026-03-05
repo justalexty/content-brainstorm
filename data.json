@@ -3,83 +3,72 @@
     "title": "Quarterly Newsletter",
     "description": "Rather than sending a perfunctory weekly email to go unopened like all other boring newsletters, publish a quarterly zine with beautiful production value and in-depth features.\n\nOpen with a \"Letter from the Editor\" by the CEO. Feature a MIDAO client in each issue with a fawning interview like it's a glossy magazine. Showcase MIDAO's latest public service to the islands with a photo spread.\n\nFinish with a hyperlinked roundup of all MIDAO content since the last issue. (Optional: offer print editions to current MIDAO clients.)",
     "medium": "Print",
-    "timeline": "Mid Term",
-    "tags": ["email", "publication"]
+    "timeline": "Mid Term"
   },
  {
     "title": "DAO It Yourself",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Print",
-    "timeline": "Long Term"
+    "medium": "AV",
+    "timeline": "Near Term"
   },
   {
     "title": "Taste Test",
     "description": "Instead of a dry, dime-a-dozen podcast format, have guests on to discuss their work (and ours) over a cooking challenge. Each episode, a Marshall Islander will submit a traditional recipe, and our onscreen team will attempt to recreate it.\n\nFor best results, film in NYC (lots of industry guests at hand) and have someone from the Marshall Islands Permanent Mission judge the final result.\n\nPerforming an activity engages the audience's mirror neurons in a way that podcasts do not. This is also a nice way to involve the local community back home.",
     "medium": "AV",
-    "timeline": "Near Term",
-    "tags": ["video", "socials"]
+    "timeline": "Mid Term"
   },
   {
     "title": "XOXO",
     "description": "Scavenger hunt that can be held at any time and/or scale. Hide a Marshall Islands postcard with a message from MIDAO in a public area. The first person to find and post it to socials tagging MIDAO wins a lump crypto prize.\n\nDrop a single postcard in a crypto hub every month, or lay out a 10-card scavenger hunt around a big conference. Super flexible activation!\n\nTagline: XOXO marks the spot",
     "medium": "Print",
-    "timeline": "Near Term",
-    "tags": ["socials", "engagement"]
+    "timeline": "Near Term"
   },
   {
     "title": "Island Questionnaire",
     "description": "In the style of the Proust Questionnaire, pose a list of island-themed questions to a different figure in crypto every month. Fluffy stuff like \"What 3 records would you want to be stranded with on an island?\" or \"Trunks or speedo?\"\n\nFormat it as a beautiful one pager, post and tag. More engaging than the usual interview fare, as everyone naturally thinks about what their own answers would be and occasionally replies with commentary.",
     "medium": "Print",
-    "timeline": "Near Term",
-    "tags": ["socials", "publication"]
+    "timeline": "Near Term"
   },
   {
     "title": "GG: Jekab Tournament",
     "description": "Easy but entertaining side event around any crypto conference. Host a catered jekab tournament with an enticing crypto prize.\n\nCan be produced at any scale, from simple to lavish. Go big by renting out a beautiful indoor space with a full spread, or keep it breezy by staging it in a public park with snack coolers.",
     "medium": "Event",
-    "timeline": "Mid Term",
-    "tags": ["event", "engagement"]
+    "timeline": "Mid Term"
   },
   {
     "title": "Atoll Adventure",
     "description": "Engage both viewers and the local Marshall Islands community by staging a competition show wherein one XOXO postcard has been hidden on each inhabited atoll, and 4 local teams compete to collect the most.\n\nAlternatively, a competition show version of XOXO can be produced basically anywhere.",
     "medium": "AV",
-    "timeline": "Long Term",
-    "tags": ["socials", "engagement"]
+    "timeline": "Long Term"
   },
   {
     "title": "Placeholder 7",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
     "medium": "Print",
-    "timeline": "Mid Term",
-    "tags": ["placeholder"]
+    "timeline": "Mid Term"
   },
   {
     "title": "Placeholder 8",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
     "medium": "Event",
-    "timeline": "Near Term",
-    "tags": ["placeholder"]
+    "timeline": "Near Term"
   },
   {
     "title": "Placeholder 9",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
     "medium": "AV",
-    "timeline": "Long Term",
-    "tags": ["placeholder"]
+    "timeline": "Long Term"
   },
   {
     "title": "Placeholder 10",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
     "medium": "AV",
-    "timeline": "Long Term",
-    "tags": ["placeholder"]
+    "timeline": "Long Term"
   },
   {
     "title": "Placeholder 12",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
     "medium": "Event",
-    "timeline": "Mid Term",
-    "tags": ["placeholder"]
+    "timeline": "Mid Term"
   }
 ]
