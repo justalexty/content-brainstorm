@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(async()=>{
+  const HASH='28892af7984fb9fa68d46a04c41197e066d18f80af7b78f4d5c3d42b440810b1';
+  const s=localStorage.getItem('cb_auth')||sessionStorage.getItem('cb_auth');
+  if(s!==HASH)window.location.href='index.html';
+})();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🇲🇭</text></svg>">
+  <title>Content Brainstorm</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --ocean: #0c2340;
+      --deep: #091a30;
+      --lagoon: #1a6b8a;
+      --reef: #2ec4b6;
+      --sand: #f4e8c1;
+      --gold: #c9a84c;
+      --coral: #e8655a;
+      --amber: #e6a243;
+      --glass: rgba(255,255,255,0.06);
+      --glass-border: rgba(255,255,255,0.1);
+      --glass-hover: rgba(255,255,255,0.1);
+      --text: #f0ece4;
+      --text-dim: rgba(240,236,228,0.5);
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--deep);
+      color: var(--text);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 20%, rgba(26,107,138,0.15) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(46,196,182,0.08) 0%, transparent 50%),
+                  radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 60%);
+      z-index: -1;
+    }
+
+    /* Header */
+    .header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .header-flag {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .header h1 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 2.0rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--sand);
+      margin-bottom: calc(0.5rem + 2px);
+    }
+    .header-rule {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1rem auto;
+    }
+    .header p {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-dim);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    /* Toolbar */
+    .toolbar {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 10;
+    }
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 0px;
+      padding: 0.25rem;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .filter-group label {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      padding: 0 0.625rem;
+    }
+    .filter-btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 0.4rem 0.875rem;
+      border-radius: 0px;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+    }
+    .filter-btn.active {
+      background: rgba(255,255,255,0.12);
+      color: var(--sand);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    .search-wrap {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .search-input {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      padding: 0.5rem 1rem;
+      border-radius: 0px;
+      border: 1px solid var(--glass-border);
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      color: var(--text);
+      outline: none;
+      width: 200px;
+      transition: border-color 0.2s;
+    }
+    .search-input::placeholder { color: var(--text-dim); }
+    .search-input:focus { border-color: rgba(46,196,182,0.4); }
+
+    .count {
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: var(--text-dim);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Cards grid */
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1rem;
+    }
+
+    /* Card — frosted glass */
+    .card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 0px;
+      padding: 1.5rem;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      transition: all 0.25s ease;
+    }
+    .card:hover {
+      background: var(--glass-hover);
+      border-color: rgba(255,255,255,0.16);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--sand);
+      line-height: 1.35;
+      margin-top: 2px;
+      margin-bottom: 0.625rem;
+    }
+    .card p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-dim);
+    }
+
+    /* Badges */
+    .badge {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0px;
+    }
+    .badge-near { background: rgba(92,170,72,0.12); color: #5CAA48; border: 1px solid rgba(92,170,72,0.2); }
+    .badge-mid { background: rgba(0,180,216,0.12); color: #00B4D8; border: 1px solid rgba(0,180,216,0.2); }
+    .badge-long { background: rgba(221,117,0,0.12); color: #DD7500; border: 1px solid rgba(221,117,0,0.2); }
+    .badge-medium {
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0px;
+      background: rgba(180,160,210,0.12);
+      color: #b0a0d0;
+      border: 1px solid rgba(180,160,210,0.2);
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 5rem 2rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-dim);
+    }
+    .empty.hidden { display: none; }
+
+    /* Footer */
+    .footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 3rem;
+      text-align: center;
+    }
+    .footer-rule {
+      width: 32px;
+      height: 1px;
+      background: var(--bg);
+      margin: 0 auto 1rem;
+    }
+    .footer p {
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .header { padding: 3rem 1.5rem 2rem; }
+      .header h1 { font-size: 2rem; }
+      .toolbar { padding: 0 1.5rem; }
+      .grid { padding: 0 1.5rem 4rem; grid-template-columns: 1fr; }
+      .search-wrap { margin-left: 0; width: 100%; }
+      .search-input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <span class="header-flag">🇲🇭</span>
+    <h1>Content Brainstorm</h1>
+    <!-- rule removed -->
+    <p>Theoretical Marketing Pillars</p>
+  </header>
+
+  <div class="toolbar">
+    <div class="filter-group">
+      <label>Timeline</label>
+      <button class="filter-btn active" data-filter="timeline" data-value="all">All</button>
+      <button class="filter-btn" data-filter="timeline" data-value="Near Term">Near</button>
+      <button class="filter-btn" data-filter="timeline" data-value="Mid Term">Mid</button>
+      <button class="filter-btn" data-filter="timeline" data-value="Long Term">Long</button>
+    </div>
+    <div class="filter-group" id="medium-filters">
+      <label>Medium</label>
+      <button class="filter-btn active" data-filter="medium" data-value="all">All</button>
+    </div>
+    <div class="search-wrap">
+      <input type="text" class="search-input" id="search" placeholder="Search…">
+      <button id="search-btn" style="background:none;border:1px solid var(--glass-border);padding:0.45rem 0.6rem;cursor:pointer;color:var(--text-dim);transition:all 0.2s;display:flex;align-items:center" onclick="document.getElementById('search').dispatchEvent(new Event('input'))"><svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8.5" cy="8.5" r="6"/><line x1="13" y1="13" x2="18" y2="18"/></svg></button>
+    </div>
+  </div>
+
+  <div class="grid" id="cards"></div>
+
+  <footer class="footer">
+    <div class="footer-rule"></div>
+    <p>Content Brainstorm</p>
+  </footer>
+
+  <script>
+    let ideas = [], activeTimeline = 'all', activeMedium = 'all', searchQuery = '';
+    const tlClass = { 'Near Term': 'badge-near', 'Mid Term': 'badge-mid', 'Long Term': 'badge-long' };
+
+    function render() {
+      const filtered = ideas.filter(i => {
+        if (activeTimeline !== 'all' && i.timeline !== activeTimeline) return false;
+        if (activeMedium !== 'all' && i.medium !== activeMedium) return false;
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          return i.title.toLowerCase().includes(q) || i.description.toLowerCase().includes(q) ||
+            (i.tags||[]).some(t => t.toLowerCase().includes(q));
+        }
+        return true;
+      });
+      /* count removed */
+      const c = document.getElementById('cards');
+      if (!filtered.length) { c.innerHTML = '<div class="empty">No items match.</div>'; return; }
+      c.innerHTML = filtered.map(i => `<div class="card">
+        <div class="card-meta">
+          <span class="badge ${tlClass[i.timeline]||'badge-near'}">${i.timeline}</span>
+          <span class="badge-medium">${i.medium}</span>
+        </div>
+        <h3>${i.title}</h3>
+        <p>${i.description.replace(/\n/g,'<br>')}</p>
+      </div>`).join('');
+    }
+
+    function buildMediumFilters() {
+      const order = ['Print','AV','Event'];
+      const mediums = order.filter(m => ideas.some(i => i.medium === m)).concat([...new Set(ideas.map(i => i.medium))].filter(m => !order.includes(m)).sort());
+      const el = document.getElementById('medium-filters');
+      mediums.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-btn'; btn.dataset.filter = 'medium'; btn.dataset.value = m;
+        btn.textContent = m; el.appendChild(btn);
+      });
+    }
+
+    document.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      const t = btn.dataset.filter, v = btn.dataset.value;
+      document.querySelectorAll(`.filter-btn[data-filter="${t}"]`).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (t === 'timeline') activeTimeline = v;
+      if (t === 'medium') activeMedium = v;
+      render();
+    });
+
+    document.getElementById('search').addEventListener('input', e => { searchQuery = e.target.value; render(); });
+    /* search toggle removed */
+
+    fetch('data.json').then(r => r.json()).then(d => { ideas = d; buildMediumFilters(); render(); });
+  </script>
+</body>
+</html>
