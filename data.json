@@ -48,10 +48,10 @@
     "timeline": "Mid Term"
   },
   {
-    "title": "Placeholder 8",
+    "title": "Legal-ease",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Event",
-    "timeline": "Near Term"
+    "medium": "Print",
+    "timeline": "Mid Term"
   },
   {
     "title": "Placeholder 9",
@@ -60,15 +60,15 @@
     "timeline": "Long Term"
   },
   {
-    "title": "Placeholder 10",
+    "title": "Anonference",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "AV",
+    "medium": "Event",
     "timeline": "Long Term"
   },
   {
-    "title": "Placeholder 12",
+    "title": "Public Service",
     "description": "Edit this card with your content.\nReplace title, description, medium, and timeline.",
-    "medium": "Event",
+    "medium": "Print", "AV",
     "timeline": "Mid Term"
   }
 ]
